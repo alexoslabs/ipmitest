@@ -38,7 +38,7 @@ fi
 echo  [*] Analyzing IPMI on $HOST...
 echo
 
-echo [*] Checking if Log Directory Exist...
+# Checking Log Directory Exist
 if [ -d $DIRECTORY ]; then
  echo
 else 
