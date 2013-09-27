@@ -17,6 +17,7 @@ bash ipmitest.sh <target>
 Example:
 
 alexos@cypher:~$ bash ipmitest.sh 192.168.0.1
+
 ------------------------------------------------------
  IPMITest - (0.1)
  by Alexandro Silva - Alexos (alexos.org)
