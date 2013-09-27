@@ -21,7 +21,8 @@ alexos@cypher:~$ bash ipmitest.sh 192.168.0.1
 ------------------------------------------------------
  IPMITest - (0.1)
  by Alexandro Silva - Alexos (alexos.org)
-------------------------------------------------------
+------------------------------------------------------ 
+
 [*] Testing ipmitool installed...
 
 [*] ipmitool version 1.8.11.dell19 installed...
