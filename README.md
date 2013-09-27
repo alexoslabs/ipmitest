@@ -42,10 +42,6 @@ by Alexandro Silva - Alexos (alexos.org)
 
 
 
-[*] Checking if Log Directory Exist...
-
-
-
 [*] Running ipmitool on 192.168.0.1...
 
 
