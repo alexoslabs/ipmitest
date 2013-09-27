@@ -12,7 +12,7 @@ and an arbitrary password.
 
 Usage:
 
-bash ipmitest.sh <target>
+bash ipmitest.sh [target]
 
 Example:
 
