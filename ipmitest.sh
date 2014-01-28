@@ -36,7 +36,6 @@ if [ $# -ne 1 ]; then
 fi
 
 echo  [*] Analyzing IPMI on $HOST...
-echo
 
 # Checking Log Directory Exist
 if [ -d $DIRECTORY ]; then
@@ -50,7 +49,6 @@ fi
 # Test Cipher Type Zero Authentication Bypass Vulnerability (CVE-2013-4784)
 echo "[*] Testing for Zero Cipher(CVE-2013-4784)..."
 ipmitool -I $INTERFACE -C 0 -H $HOST -U $USER -P "" $COMMAND > ipmitool/$LOGFILE
-echo
 cd ipmitool
 cat $LOGFILE | grep "ADMINISTRATOR"
 cat $LOGFILE | grep "console ip"
