@@ -44,15 +44,16 @@ if [ -d $DIRECTORY ]; then
 else 
  echo [*] Creating Log Directory...
  echo
- mkdir ipmitool && cd ipmitool
+ mkdir ipmitool
 fi
 
 # Test Cipher Type Zero Authentication Bypass Vulnerability (CVE-2013-4784)
 echo [*] Running ipmitool on $HOST...
-ipmitool -I $INTERFACE -C 0 -H $HOST -U $USER -P "" $COMMAND > $LOGFILE
+ipmitool -I $INTERFACE -C 0 -H $HOST -U $USER -P "" $COMMAND > ipmitool/$LOGFILE
 
 echo
-echo [*] Testing for Zero Cipher(CVE-2013-4784)...
+echo "[*] Testing for Zero Cipher(CVE-2013-4784)..."
+cd ipmitool
 cat $LOGFILE | grep "ADMINISTRATOR"
 cat $LOGFILE | grep "console ip"
 echo
