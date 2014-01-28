@@ -19,13 +19,13 @@ echo " by Alexandro Silva - Alexos (alexos.org)"
 echo ------------------------------------------------------
 
 # Test dependencies 
-echo [*] Testing ipmitool installed...
+echo [*] Testing dependencies...
 echo
 if [ 'dpkg -l | grep -qw ipmitool' ]; then
  echo [*] $IPMIVERSION  installed...
  echo
 else 
- echo [*] Installing IPMITOOL package...
+ echo [*] Installing dependencies...
  sudo aptitude install ipmitool freeipmi-tools
 fi
 
@@ -48,11 +48,9 @@ else
 fi
 
 # Test Cipher Type Zero Authentication Bypass Vulnerability (CVE-2013-4784)
-echo [*] Running ipmitool on $HOST...
-ipmitool -I $INTERFACE -C 0 -H $HOST -U $USER -P "" $COMMAND > ipmitool/$LOGFILE
-
-echo
 echo "[*] Testing for Zero Cipher(CVE-2013-4784)..."
+ipmitool -I $INTERFACE -C 0 -H $HOST -U $USER -P "" $COMMAND > ipmitool/$LOGFILE
+echo
 cd ipmitool
 cat $LOGFILE | grep "ADMINISTRATOR"
 cat $LOGFILE | grep "console ip"
