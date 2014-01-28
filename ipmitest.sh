@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HOST=$1
-VERSION=0.1
+VERSION=0.2
 IPMIVERSION=$(ipmitool -V)
 DATE=$(date +%F_%R:%S)
 DIRECTORY='ipmitool'
