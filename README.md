@@ -20,38 +20,26 @@ alexos@cypher:~$ bash ipmitest.sh 192.168.0.1
 
 ------------------------------------------------------
  
-
-IPMITest - (0.1)
+IPMITest - (0.2)
 
 by Alexandro Silva - Alexos (alexos.org)
-
 
 ------------------------------------------------------ 
 
 
-
-[*] Testing ipmitool installed...
-
+[*] Testing dependencies...
 
 
 [*] ipmitool version 1.8.11.dell19 installed...
 
 
-
 [*] Analyzing IPMI on 192.168.0.1...
 
 
-
-[*] Running ipmitool on 192.168.0.1...
-
-
-
-[*] Testing for Zero Cipher CVE-2013-4784...
+[*] Testing for Zero Cipher (CVE-2013-4784)...
 
 privilege level               : ADMINISTRATOR
 
 console ip                    : 192.168.0.1
-
-
 
 [*] done
